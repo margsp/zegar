@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title>Czas</title>
+</head>
+<body>
+	<h1 id="czas">00:00</h1>
+	<script language="javascript">
+				var date = new Date();
+			var time = date.getHours() + ":" + date.getMinutes();
+			document.getElementById("czas").innerHTML = time;
+		setInterval(function()
+		{ 
+			var date = new Date();
+			var time = date.getHours() + ":" + date.getMinutes();
+			document.getElementById("czas").innerHTML = time;
+		}, 60000);
+	</script>
+</body>
+</html>
