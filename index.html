@@ -3,19 +3,28 @@
 	<title>Czas</title>
 </head>
 <body>
-	<p id="czas" style="font-size: 72px">00:00</p>
+	<p id="time" style="font-size: 10em">00:00</p>
 	<script language="javascript">
-			var date = new Date();
-			var minutes1 = date.getMinutes() < 10 ? '0' : '';
-			var time = (date.getHours() + 2) + ":" + minutes1 + date.getMinutes();
-			document.getElementById("czas").innerHTML = time;
-		setInterval(function()
-		{ 
-			var date = new Date();
-			var minutes1 = date.getMinutes() < 10 ? '0' : '';
-			var time = (date.getHours() + 2) + ":" + minutes1 + date.getMinutes();
-			document.getElementById("czas").innerHTML = time;
-		}, 60000);
+	
+			setClock();
+			
+			setInterval(function()
+			{ 
+				setClock();
+			}, 60000);
+			
+			function setClock()
+			{
+				var minOffset = 1;
+				var hrOffset = 2;
+			
+				var date = new Date();
+				var mins = date.getMinutes() + minOffset;
+				var minutesL = mins < 10 ? '0' : '';
+				var time = (date.getHours() + hrOffset) + ":" + minutesL + mins;
+				document.getElementById("time").innerHTML = time;
+			}
+			
 	</script>
 </body>
 </html>
