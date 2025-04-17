@@ -6,7 +6,13 @@
 <body style="height: 100%; margin: 0; display: flex; align-items: center; justify-content: center">
 	<div id="time" style="font-family: Verdana, sans-serif; font-size: 6cm">00:00</div>
 	<script language="javascript">
-	
+		//**CONFIGURATION AREA**
+		//set both values to 0 if your device's local time is OK
+			var hrOffset = 2;
+			var minOffset = 1;
+		//END OF CONFIGURATION
+
+		
 			setClock();
 			
 			setInterval(function()
@@ -17,8 +23,6 @@
 			function setClock()
 			{
 				var date = new Date();
-				var hrOffset = 2;
-				var minOffset = 1;
 				var mins = date.getMinutes() + minOffset;
 				if(date.getMinutes() == 59)
 				{
