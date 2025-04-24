@@ -40,5 +40,5 @@ function getMinutes()
 	var mins = new Date().getMinutes();
 	mins = mins + minOffset;
 	var minsL = mins < 10 ? '0' : '';
-	return minutesL + mins;
+	return minsL + mins;
 }
