@@ -1,6 +1,6 @@
 //**CONFIGURATION AREA**
 //set both values to 0 if your device's local time is OK
-var hrOffset = 2;
+var hrOffset = 1;
 var minOffset = 0;
 //END OF CONFIGURATION
 
