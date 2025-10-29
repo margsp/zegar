@@ -9,7 +9,7 @@ setClock();
 setInterval(function()
 { 
   setClock();
-}, 60000);
+}, 150000);
 
 function setClock()
 {
