@@ -1,9 +1,7 @@
 //**CONFIGURATION AREA**
-//set both values to 0 if your device's local time is OK
 var hrOffset = 2;
 var minOffset = 0;
-
-var interval = 300000; //milliseconds - refresh time every 5 minutes
+var interval = 300000; //milliseconds
 //END OF CONFIGURATION
 
 setClock();
